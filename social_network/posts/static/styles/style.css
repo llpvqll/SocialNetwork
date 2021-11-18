@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(189, 187, 187);
+    color: black;
+    font-family: Arial;
+}
+
+header{
+    background-color: white;
+    height: 100px;
+    width: max;
+    margin: -30px;
+}
+
+.home {
+    float: left;
+}
+
+.header_link {
+    float: right;
+    margin: 30px;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 15px;
+    transition: 0.5s;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+
+.header_link:hover {
+    border-color: blue;
+    color: blue;
+    background-color: LightGray;
+}
+
+.profile {
+    margin-top: 100px;
+    width: 700px;
+    background-color: black;
+    color: white;
+}
+

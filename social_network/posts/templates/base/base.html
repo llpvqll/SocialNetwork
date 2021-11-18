@@ -1,0 +1,68 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <title>{% block title %}Home Page{% endblock %}</title>
+</head>
+<body>
+   <header>
+       {% if user.is_authenticated %}
+       <a href="/logout" class="header_link">Logout</a>
+       <a href="/posts" class="header_link">Posts</a>
+       <a href="/profiles" class="header_link">Profile</a>
+       <a href="/" class="header_link">Home</a>
+       {% else %}
+        <a href="" class="header_link">Register</a>
+        <a href="" class="header_link">Login</a>
+       {% endif %}
+       {% block header %}<h1 class="home">Home Page</h1>{% endblock %}
+    </header>
+{% block body %}
+
+    <p align="center">
+        <br>
+        <br>
+        The Social Network is a 2010 American biographical drama film directed by David <br>
+        Fincher and written by Aaron Sorkin. Adapted from Ben Mezrich's 2009 book The<br>
+        Accidental Billionaires, it portrays the founding of social networking website<br>
+        Facebook and the resulting lawsuits. It stars Jesse Eisenberg as founder Mark<br>
+        Zuckerberg, along with Andrew Garfield as Eduardo Saverin, Justin Timberlake as<br>
+        Sean Parker, Armie Hammer as Cameron and Tyler Winklevoss, and Max Minghella as<br>
+        Divya Narendra. Neither Zuckerberg nor any other Facebook staff were involved<br>
+        with the project, although Saverin was a consultant for Mezrich's book.<br>
+<br>
+        Production of the film began in 2009, when Eisenberg, Timberlake, and Garfield were all<br>
+        announced to star. Principal photography began that same year in October in<br>
+        Cambridge, Massachusetts, and lasted until November. Additional scenes were<br>
+        shot in California, in the cities of Los Angeles and Pasadena, as a portion<br>
+        of the film was set in Silicon Valley. In 2010, it was announced that Trent<br>
+        Reznor and Atticus Ross would create the film's score, which was released on<br>
+        September 28, 2010.<br>
+<br>
+        The film was released in the United States by Columbia Pictures on October 1, 2010.<br>
+        A major critical and commercial success, the film grossed $224 million on a<br>
+        $40 million budget and was widely acclaimed by critics, who praised Fincher's<br>
+        direction, the performances (particularly those of Eisenberg and Garfield),<br>
+        Sorkin's screenplay (which was particularly singled out for acclaim), editing,<br>
+        cinematography, and score. It was named one of the best films of the year by<br>
+        78 critics, and named the best by 22 critics, the most of any film that year.<br>
+        It was also chosen by the National Board of Review as the best film of 2010.<br>
+        At the 83rd Academy Awards, it received eight nominations, including for Best<br>
+        Picture, Best Director, and Best Actor for Eisenberg, and won three: Best<br>
+        Adapted Screenplay, Best Original Score, and Best Film Editing. It also<br>
+        received awards for Best Motion Picture – Drama, Best Director, Best Screenplay,<br>
+        and Best Original Score at the 68th Golden Globe Awards.<br>
+<br>
+        The Social Network has maintained a strong reputation since its initial release,<br>
+        and is commonly cited by critics as one of the best films of its respective <br>
+        decade and century.[5][6][7][8] Whilst no official sequel has been announced,<br>
+        Sorkin has publicly expressed interest and willingness to write a screenplay <br>
+        for one should Fincher return to direct.<br>
+    <br>
+    </p>
+
+{% endblock %}
+</body>
+</html>

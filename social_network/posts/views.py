@@ -4,6 +4,6 @@ from django.shortcuts import render
 
 
 def main(request):
-    template_name = 'base.html'
+    template_name = 'posts.html'
     context = {}
     return render(request, template_name, context)
