@@ -2,10 +2,35 @@
 
 {% block title %} Post Page {% endblock %}
 
-{% block header %}<h1 class="home">Post Page</h1>{% endblock %}
+{% block header %}<h1 align="center" class="home">Post Page</h1>{% endblock %}
 
 
 {% block body %}
 
+    <div class="add-new-post">
+        <h3>Add new post</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+<h1>All posts</h1>
+
+    <div>
+        <table border="1", cellpadding="5px">
+            {% for elem in posts %}
+                <tr>
+
+                    <td>{{elem.post_author}}</td>
+                    <td>{{elem.image}}</td>
+                    <td>{{elem.post_text}}</td>
+                    <td>{{elem.liked}}</td>
+                    <td>{{elem.created}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
 
 {% endblock %}

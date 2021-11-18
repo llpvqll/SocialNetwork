@@ -1,15 +1,17 @@
 {% extends 'base/base.html' %}
 
 {% block title %} Profile Page {% endblock %}
-{% block header %}<h1 class="home">Profile Page</h1>{% endblock %}
+{% block header %}<h1 class="home" align="center">Profile Page</h1>{% endblock %}
 
 {% block body %}
 
-{% for elem in profile %}
+
 <div >
-<p class="profile">Name - {{elem.name}}</p>
-<p class="profile">Name - {{elem.surname}}</p>
-<p class="profile">Name - {{elem.email}}</p>
+<p class="profile">ID - {{user.pk}}</p>
+<p class="profile">Name - {{user}}</p>
+<p class="profile">Email - {{user.email}}</p>
 </div>
-{% endfor %}
+
+
+
 {% endblock %}

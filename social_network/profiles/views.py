@@ -2,21 +2,22 @@ from django.shortcuts import render
 from django.views.generic import DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView
+from django.contrib.auth.models import User
 from .models import Profile
 # Create your views here.
 
 
-class List(TemplateView):
+def profile_view(request):
     template_name = 'profile.html'
-
-    def profile_view(self, request):
-        context = {}
-        if request.user.is_authenticated:
-            profile = Profile.objects.all()
-            context['profile'] = profile
-            return render(request, self.template_name, context)
-        else:
-            return render(request, self.template_name, context)
+    context = {}
+    if request.user.is_authenticated:
+        profile = request.user
+        # username = Profile.username
+        # context['username'] = username
+        context['profile'] = profile
+        return render(request, template_name, context)
+    else:
+        return render(request, template_name, context)
 
 
 

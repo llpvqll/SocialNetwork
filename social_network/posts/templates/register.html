@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <label for="">{{field.label}}</label>
+    <div class="form-group">
+        {{field}}
+    </div>
+    {% if field.errors %}
+        <p>{{ field.errors }}</p>
+    {% endif %}
+    {% endfor %}
+    <button type="submit">Register</button>
+
+</form>
+
+</body>
+</html>

@@ -2,6 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.List.as_view()),
+    path('', views.profile_view),
     # path('<slug>', ProfileDetailView.as_view()),
 ]
